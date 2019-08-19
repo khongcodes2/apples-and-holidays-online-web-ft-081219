@@ -67,7 +67,7 @@ def all_supplies_in_holidays(holiday_hash)
       def namename(snakecase_symbol)
         "#{holiday_name}".tr("_"," ").capitalize
       end
-      puts "  #{holiday_name.capitalize}: #{supplies.join(", ")}"
+      puts "  #{namename(holiday_name)}: #{supplies.join(", ")}"
     end
   end
 
