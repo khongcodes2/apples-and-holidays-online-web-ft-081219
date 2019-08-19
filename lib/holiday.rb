@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
     seasonal_h.each do |holiday_name, supplies|
       #convert holiday_name to a real name
       def namename(snakecase_symbol)
-        "#{snakecase_symbol}".tr("_"," ").capitalize
+        "#{snakecase_symbol}".split("_").capitalize.join(" ")
       end
       puts "  #{namename(holiday_name)}: #{supplies.join(", ")}"
     end
